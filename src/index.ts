@@ -1,5 +1,6 @@
 import express from 'express';
 import mongoose from 'mongoose';
+import cors from 'cors';
 import { PORT, MONGODB_URL } from './config';
 import AuthRoute from './routes/auth';
 import UserRoute from './routes/user';
