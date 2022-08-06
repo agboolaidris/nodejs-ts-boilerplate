@@ -9,6 +9,7 @@ const app = express();
 const Server = async () => {
     try {
         await mongoose.connect(MONGODB_URL, { retryWrites: true, w: 'majority' });
+        app.use(cors({}))
         app.use(express.urlencoded({ extended: true }));
         app.use(express.json());
 
